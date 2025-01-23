@@ -18,7 +18,7 @@ test('Translate LISP operation to JavaScript', () => {
 });
 
 test('Translate LISP condition to JavaScript', () => {
-  // TODO: replace with comparison operators when they are implemented
+  // TODO: replace with comparison operators when https://github.com/metarhia/metalisp/issues/14 is fixed
   const program = '(cond ((+ x y)(+ 4 7)(+ 1 3)) ((- y x)(+ 5 2)))';
   const tokens = tokenize(program);
   const src = parse(tokens).toJavaScript();
