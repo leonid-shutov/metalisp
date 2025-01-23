@@ -71,6 +71,6 @@ test('Evaluate cond (has a match)', () => {
 test('Evaluate cond (no match)', () => {
   const program = '(cond ((eq x 100)(+ 6 5)(list 1 4)) ((eq y x)(list 5 7)))';
   const result = evaluate(program, { x: 99, y: 98 });
-  const expected = undefined;
+  const expected = false;
   assert.strictEqual(result, expected, 'cond failed');
 });
